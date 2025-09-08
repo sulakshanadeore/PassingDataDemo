@@ -22,4 +22,11 @@ this.valueRecd=params.get('myval');
   this.DataSer.currentMsg.subscribe(m1=>this.messageHere=m1);
 }
 
+
+onlogout(){
+  localStorage.removeItem('usernameLoggedIn');
+  //inform backend api about this....
+  alert("logged out successfully");
+}
+
 }
