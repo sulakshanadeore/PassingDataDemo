@@ -1,0 +1,13 @@
+<h1>Products List</h1>
+<div>
+<app-product-item *ngFor="let p of products" [productinput]="p"
+    (add)="onAddToCart($event)" (remove)="onRemoveFromCart($event)">
+</app-product-item>
+</div>
+
+<h1>Shopping Cart</h1>
+<ul>
+    <li *ngFor="let c of MyShoppingcart">
+        {{c.id}}---{{c.name}}--{{c.price|currency:'INR'}}
+    </li>
+</ul>
